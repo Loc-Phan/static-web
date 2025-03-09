@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: #212123;
+  background: var(--background);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .container {
+    @apply max-w-[1400px] px-8;
+    @apply mx-auto;
+  }
+
+  @media (max-width: 1024px) {
+    .container {
+      @apply max-w-full px-4;
+      /* For mobile screens */
+    }
+  }
+}
+
+@media (min-width: 991px) {
+  .backCard {
+    transform: translate(19%, 128px) rotate(-100.53deg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .backCard {
+    transform: translate(19%, 77px) rotate(-100.53deg);
+  }
+}
+
+@media (min-width: 1280px) {
+  .backCard {
+    transform: translate(17%, -4px) rotate(-102.53deg);
+  }
+}
+
+@media (max-width: 990px) {
+  .backCard {
+    transform: translate(14%, -10%) rotate(0);
+  }
+
+  .boxCard {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.master-card {
+  animation: masterCard 5s infinite ease-in-out;
+}
+
+@keyframes masterCard {
+
+  0%,
+  100% {
+    transform: translate3d(0px, 15.8995vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+
+  50% {
+    transform: translate3d(0px, 13vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+}
+
+.visa-card {
+  animation: visaCard 5s infinite ease-in-out;
+}
+
+@keyframes visaCard {
+
+  0%,
+  100% {
+    transform: translate3d(0px, 2.3932vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+
+  50% {
+    transform: translate3d(0px, 0.3932vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+
+  }
+}
+
+.paypal-card {
+  animation: paypalCard 5s infinite ease-in-out;
+}
+
+@keyframes paypalCard {
+
+  0%,
+  100% {
+    transform: translate3d(0px, 4.9397vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+
+  50% {
+    transform: translate3d(0px, 2.9397vh, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  }
+}
